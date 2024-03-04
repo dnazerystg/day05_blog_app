@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+My Blog
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/ss.png' %}" alt="Me">
+        <h2>Me</h2>
+    </header>
+    <p>
+        Hi, I am Me and I want to sleep.
+    </p>
+</section>
+<section id="latest-posts">
+    <h2>My latest posts</h2>
+    <ul>
+        {% for post in posts %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
+
+    </ul>
+</section>
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        I love to write smoothies and drink programs.
+    </p>
+    <p>
+        My goal is to stay awake during the day time hours using a simple technique known as the minor nap technique.
+    </p>
+</section>
+{% endblock %}

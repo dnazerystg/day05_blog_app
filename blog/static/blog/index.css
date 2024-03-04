@@ -1,0 +1,13 @@
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.post {
+     background-color: gray;
+     border: 3px solid red;
+}
+
+.post:hover {
+    background-color: aqua;
+}
